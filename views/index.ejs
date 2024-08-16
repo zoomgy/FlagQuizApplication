@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <form action="/submit" method="POST">
+            <%if(locals.question){%>
+                <h1>Enter The Name Of The Country</h1>
+                <h1><%= counter %></h1>
+                <h1><%=question.flag%></h1>
+            <% } %>
+            <%if(locals.isFalse){%>
+                <h1>WRONG ANSWER GAME OVER</h1>
+            <% } %>
+            <input type="text" name="countryname">
+            <input type="submit" class="btn">
+        </form>
+    </div>
+</body>
+</html>
